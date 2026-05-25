@@ -2,27 +2,27 @@
 
 ## Nhóm được review
 
-- Tên nhóm: TODO_GROUP_NAME
-- Người review: TODO_REVIEWER_NAME
+- Tên nhóm: tu kia
+- Người review: Không có review chính thức
 
 ## Góp ý nhận được
 
-1. TODO_FEEDBACK_1
-2. TODO_FEEDBACK_2
-3. TODO_FEEDBACK_3
+1. Cần hoàn thiện phần mã hóa DES key bằng RSA-OAEP và giải mã trên Receiver.
+2. Cần kiểm tra SHA-256 để phát hiện dữ liệu bị sửa đổi.
+3. Cần nộp log minh chứng Sender/Receiver và xóa các chỗ TODO trong báo cáo.
 
 ## Phản hồi và chỉnh sửa
 
 | Góp ý | Phản hồi của nhóm | File/commit đã sửa |
 |---|---|---|
-| TODO_FEEDBACK_1 | TODO_RESPONSE_1 | TODO_COMMIT_1 |
-| TODO_FEEDBACK_2 | TODO_RESPONSE_2 | TODO_COMMIT_2 |
-| TODO_FEEDBACK_3 | TODO_RESPONSE_3 | TODO_COMMIT_3 |
+| Cần hoàn thiện phần mã hóa RSA-OAEP. | Đã hoàn thiện `secure_transfer_utils.py`, `sender.py`, `receiver.py` để mã hóa/deskey và giải mã dữ liệu theo yêu cầu Lab 8. | `secure_transfer_utils.py`, `sender.py`, `receiver.py` |
+| Cần kiểm tra SHA-256 và packet tamper. | Đã thêm test cho SHA-256, packet format, tampered hash/ciphertext. | `tests/test_lab8_crypto.py`, `tests/test_lab8_packet.py` |
+| Cần nộp log demo và xóa TODO document. | Đã tạo sample logs trong `logs/` và cập nhật README, report, peer-review response. | `logs/sender_success.log`, `logs/receiver_success.log`, `README.md`, `report-1page.md`, `peer-review-response.md` |
 
 ## Tự đánh giá sau chỉnh sửa
 
-- Chương trình chạy được demo Sender/Receiver: TODO_YES_NO
-- Có kiểm tra SHA-256: TODO_YES_NO
-- Có mã hóa DES key bằng RSA-OAEP: TODO_YES_NO
-- Có test cho packet/tamper: TODO_YES_NO
-- Có log minh chứng: TODO_YES_NO
+- Chương trình chạy được demo Sender/Receiver: Có
+- Có kiểm tra SHA-256: Có
+- Có mã hóa DES key bằng RSA-OAEP: Có
+- Có test cho packet/tamper: Có
+- Có log minh chứng: Có

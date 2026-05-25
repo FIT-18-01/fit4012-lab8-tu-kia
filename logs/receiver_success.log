@@ -1,0 +1,8 @@
+[*] Receiver đang lắng nghe tại 0.0.0.0:6000
+[+] Đã nhận kết nối từ 127.0.0.1:12345
+[+] Dữ liệu nguyên vẹn: SHA-256 khớp.
+[+] Đã giải mã DES key bằng RSA private key của receiver.
+[+] Đã giải mã bản tin bằng DES-CBC.
+[+] Bản tin gốc: Xin chào FIT4012!
+Đây là bản tin mẫu cho Lab 8: DES-CBC + SHA-256 + RSA-OAEP qua socket.
+

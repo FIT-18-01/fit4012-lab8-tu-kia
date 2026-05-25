@@ -15,20 +15,20 @@ Lab 8 kế thừa cách tổ chức repo của Lab 6 socket starter, nhưng thay
 
 ## Team members
 
-- **Thành viên 1**: TODO_MEMBER_1 - MSSV: TODO_MEMBER_1_ID
-- **Thành viên 2**: TODO_MEMBER_2 - MSSV: TODO_MEMBER_2_ID
+- **Thành viên 1**: Nguyễn Trung Kiên - MSSV: 1871020345
+- **Thành viên 2**: Đinh Mạnh Tú - MSSV: 1871020614
 
 ## Task division
 
-- **Thành viên 1 phụ trách chính**: TODO_ROLE_MEMBER_1
-- **Thành viên 2 phụ trách chính**: TODO_ROLE_MEMBER_2
-- **Phần làm chung**: TODO_SHARED_WORK
+- **Thành viên 1 phụ trách chính**: Nguyễn Trung Kiên (thiết kế Receiver, kiểm tra hash)
+- **Thành viên 2 phụ trách chính**: Đinh Mạnh Tú (thiết kế Sender, mã hóa DES/RSA)
+- **Phần làm chung**: Thiết kế packet, kiểm tra toàn vẹn, viết test và hoàn thiện báo cáo
 
 ## Demo roles
 
-- **Demo Sender / mã hóa / log gửi**: TODO_DEMO_ROLE_1
-- **Demo Receiver / giải mã / kiểm tra hash**: TODO_DEMO_ROLE_2
-- **Cả hai cùng trả lời câu hỏi mở rộng AES và chữ ký số**: TODO_DEMO_ROLE_SHARED
+- **Demo Sender / mã hóa / log gửi**: Đinh Mạnh Tú
+- **Demo Receiver / giải mã / kiểm tra hash**: Nguyễn Trung Kiên
+- **Cả hai cùng trả lời câu hỏi mở rộng AES và chữ ký số**: Cả hai
 
 ---
 
@@ -147,6 +147,14 @@ RECEIVER_PUBLIC_KEY=keys/receiver_public.pem \
 MESSAGE="Xin chao FIT4012 - Lab 8 Secure Transfer" \
 python sender.py
 ```
+
+Hoặc đơn giản hơn nếu bạn đã có `sample_input.txt`:
+
+```bash
+python sender.py
+```
+
+Khi `INPUT_FILE` và `MESSAGE` không được đặt, sender sẽ tự động đọc `sample_input.txt` nếu file tồn tại.
 
 ---
 

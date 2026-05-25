@@ -9,16 +9,21 @@ DATA_PORT = int(os.getenv("DATA_PORT", os.getenv("PORT", "6000")))
 RECEIVER_PUBLIC_KEY = os.getenv("RECEIVER_PUBLIC_KEY", "keys/receiver_public.pem")
 MESSAGE_ENV = os.getenv("MESSAGE")
 INPUT_FILE = os.getenv("INPUT_FILE", "")
+DEFAULT_INPUT_FILE = "sample_input.txt"
 LOG_FILE = os.getenv("SENDER_LOG_FILE", "")
 TIMEOUT = float(os.getenv("SOCKET_TIMEOUT", "10"))
 
 
 def get_plaintext() -> bytes:
-    """Read plaintext from INPUT_FILE, MESSAGE, or keyboard input."""
+    """Read plaintext from INPUT_FILE, MESSAGE, sample_input.txt, or keyboard input."""
     if INPUT_FILE:
         return Path(INPUT_FILE).read_bytes()
     if MESSAGE_ENV is not None:
         return MESSAGE_ENV.encode("utf-8")
+    default_path = Path(DEFAULT_INPUT_FILE)
+    if default_path.exists():
+        print(f"[+] Đã dùng nội dung từ {DEFAULT_INPUT_FILE}")
+        return default_path.read_bytes()
     return input("Nhập bản tin: ").encode("utf-8")
 
 
