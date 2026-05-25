@@ -182,6 +182,16 @@ SENDER_LOG_FILE=logs/sender_success.log \
 python sender.py
 ```
 
+> Nếu `logs/sender_success.log` đã tồn tại, nội dung mới sẽ được thêm vào file này thay vì ghi đè.
+
+Nếu bạn dùng `peer.py`, các biến môi trường `SENDER_LOG_FILE` và `RECEIVER_LOG_FILE` vẫn có thể dùng để ghi log gửi/nhận SHA-256:
+
+```bash
+SENDER_LOG_FILE=logs/peer_sender.log \
+RECEIVER_LOG_FILE=logs/peer_receiver.log \
+py peer.py
+```
+
 ---
 
 ## Gửi dữ liệu từ file

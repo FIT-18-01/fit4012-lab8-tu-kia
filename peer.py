@@ -32,7 +32,8 @@ def send_packet(host: str, port: int, packet: bytes, timeout: float = TIMEOUT) -
 
 def write_log(path: str, lines: list) -> None:
     Path(path).parent.mkdir(parents=True, exist_ok=True)
-    Path(path).write_text("\n".join(lines) + "\n", encoding="utf-8")
+    with Path(path).open("a", encoding="utf-8") as f:
+        f.write("\n".join(lines) + "\n")
 
 
 def handle_conn(conn, addr, own_priv):
